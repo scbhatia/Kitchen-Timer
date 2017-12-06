@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=X:\Desktop\KitchenTimer\Clock_Add.ncd
+OUTFILE=X:\Desktop\KitchenTimer\Clock_Add.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=X:\Desktop\KitchenTimer
+LICENSE=ISE
+USER_INFO=174135685_174135686_210617260_121

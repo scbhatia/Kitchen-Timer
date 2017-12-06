@@ -1,0 +1,602 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\seven_alternate.v" into library work
+Parsing module <seven_alternate>.
+Analyzing Verilog file "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\binary_to_segment.v" into library work
+Parsing module <binary_to_segment>.
+Analyzing Verilog file "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\SegDisplay.v" into library work
+Parsing module <SegDisplay>.
+Analyzing Verilog file "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" into library work
+Parsing module <Clock_Sub>.
+Analyzing Verilog file "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" into library work
+Parsing module <Clock_Add>.
+Analyzing Verilog file "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" into library work
+Parsing module <Main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Main>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 31: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 32: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 33: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 34: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 41: Result of 6-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 46: Result of 6-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <SegDisplay>.
+
+Elaborating module <seven_alternate>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\seven_alternate.v" Line 32: Result of 19-bit expression is truncated to fit in 18-bit target.
+
+Elaborating module <binary_to_segment>.
+WARNING:HDLCompiler:634 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\SegDisplay.v" Line 24: Net <clk_out> does not have a driver.
+WARNING:HDLCompiler:189 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v" Line 66: Size mismatch in connection of port <bin0>. Formal port size is 4-bit while actual signal size is 1-bit.
+
+Elaborating module <Clock_Add>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" Line 49: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" Line 72: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" Line 79: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" Line 87: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" Line 96: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1499 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v" Line 21: Empty module <Clock_Add> remains a black box.
+
+Elaborating module <Clock_Sub>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" Line 49: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" Line 65: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" Line 78: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" Line 92: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" Line 107: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1499 - "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v" Line 21: Empty module <Clock_Sub> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Main.v".
+    Found 4-bit register for signal <bin1>.
+    Found 4-bit register for signal <bin2>.
+    Found 4-bit register for signal <bin3>.
+    Found 1-bit register for signal <upstart>.
+    Found 4-bit register for signal <AN>.
+    Found 7-bit register for signal <seg>.
+    Found 1-bit register for signal <downstart>.
+    Found 4-bit register for signal <bin0>.
+    Summary:
+	inferred  29 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <Main> synthesized.
+
+Synthesizing Unit <mod_6u_4u>.
+    Related source file is "".
+    Found 10-bit adder for signal <GND_2_o_b[3]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_2_o_b[3]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_2_o_b[3]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_2_o_b[3]_add_7_OUT> created at line 0.
+    Found 6-bit adder for signal <a[5]_b[3]_add_9_OUT> created at line 0.
+    Found 6-bit adder for signal <a[5]_GND_2_o_add_11_OUT> created at line 0.
+    Found 6-bit adder for signal <a[5]_GND_2_o_add_13_OUT> created at line 0.
+    Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+	inferred  37 Multiplexer(s).
+Unit <mod_6u_4u> synthesized.
+
+Synthesizing Unit <div_6u_4u>.
+    Related source file is "".
+    Found 10-bit adder for signal <GND_3_o_b[3]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_3_o_b[3]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_3_o_b[3]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_3_o_b[3]_add_7_OUT> created at line 0.
+    Found 6-bit adder for signal <a[5]_b[3]_add_9_OUT[5:0]> created at line 0.
+    Found 6-bit adder for signal <a[5]_GND_3_o_add_11_OUT[5:0]> created at line 0.
+    Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+	inferred  21 Multiplexer(s).
+Unit <div_6u_4u> synthesized.
+
+Synthesizing Unit <SegDisplay>.
+    Related source file is "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\SegDisplay.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <clk_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <SegDisplay> synthesized.
+
+Synthesizing Unit <seven_alternate>.
+    Related source file is "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\seven_alternate.v".
+    Found 18-bit register for signal <count>.
+    Found 18-bit adder for signal <count[17]_GND_5_o_add_1_OUT> created at line 32.
+    Found 4x4-bit Read Only RAM for signal <AN>
+    Found 4-bit 4-to-1 multiplexer for signal <small_bin> created at line 41.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <seven_alternate> synthesized.
+
+Synthesizing Unit <binary_to_segment>.
+    Related source file is "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\binary_to_segment.v".
+    Found 16x7-bit Read Only RAM for signal <seven>
+    Summary:
+	inferred   1 RAM(s).
+Unit <binary_to_segment> synthesized.
+
+Synthesizing Unit <Clock_Add>.
+    Related source file is "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock.v".
+        state_next = 3'b001
+        state_none = 3'b000
+        state_add_seconds_lower = 3'b010
+        state_add_seconds_upper = 3'b011
+        state_add_minutes_lower = 3'b100
+        state_add_minutes_upper = 3'b101
+        state_reset = 3'b110
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <seg> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <AN> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <Clock_Add> synthesized.
+
+Synthesizing Unit <Clock_Sub>.
+    Related source file is "\\ad\eng\users\s\c\scbhatia\Desktop\KitchenTimer\KitchenTimer\Clock_Sub.v".
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <seg> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <AN> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <Clock_Sub> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 14
+ 10-bit adder                                          : 2
+ 18-bit adder                                          : 1
+ 6-bit adder                                           : 5
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 2
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 18-bit register                                       : 1
+ 4-bit register                                        : 5
+ 7-bit register                                        : 1
+# Comparators                                          : 14
+ 10-bit comparator lessequal                           : 2
+ 6-bit comparator lessequal                            : 6
+ 7-bit comparator lessequal                            : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 54
+ 4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <count_17> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_16> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_15> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_14> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_13> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_12> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_11> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_10> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_9> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_8> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_7> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_6> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_5> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_4> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_0> (without init value) has a constant value of 0 in block <sa3>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <binary_to_segment>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_seven> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <bin>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <seven>         |          |
+    -----------------------------------------------------------------------
+Unit <binary_to_segment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <seven_alternate>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_AN> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <AN>            |          |
+    -----------------------------------------------------------------------
+Unit <seven_alternate> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 13
+ 4-bit adder                                           : 1
+ 6-bit adder                                           : 12
+# Counters                                             : 1
+ 18-bit up counter                                     : 1
+# Registers                                            : 29
+ Flip-Flops                                            : 29
+# Comparators                                          : 14
+ 10-bit comparator lessequal                           : 2
+ 6-bit comparator lessequal                            : 6
+ 7-bit comparator lessequal                            : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 54
+ 4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <downstart> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <upstart> of sequential type is unconnected in block <Main>.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_17> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_16> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_15> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_14> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_13> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_12> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_11> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_10> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_9> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_8> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_7> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_6> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_5> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_4> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_3> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_2> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_1> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sg1/sa3/count_0> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_2> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_1> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <AN_0> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bin3_3> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bin1_3> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <AN_1> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <AN_2> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <AN_3> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_0> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_3> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_4> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_5> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_6> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 14
+ Flip-Flops                                            : 14
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 8
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT5                        : 4
+# FlipFlops/Latches                : 14
+#      FDE                         : 14
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 8
+#      OBUF                        : 27
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                    7  out of   9112     0%  
+    Number used as Logic:                 7  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      7
+   Number with an unused Flip Flop:       7  out of      7   100%  
+   Number with an unused LUT:             0  out of      7     0%  
+   Number of fully used LUT-FF pairs:     0  out of      7     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          38
+ Number of bonded IOBs:                  36  out of    232    15%  
+    IOB Flip Flops/Latches:              14
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 14    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 3.426ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 77 / 28
+-------------------------------------------------------------------------
+Offset:              3.426ns (Levels of Logic = 2)
+  Source:            setmin (PAD)
+  Destination:       bin2_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: setmin to bin2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.907  setmin_IBUF (setmin_IBUF)
+     LUT2:I0->O            7   0.203   0.773  _n0078_inv1 (_n0078_inv)
+     FDE:CE                    0.322          bin2_0
+    ----------------------------------------
+    Total                      3.426ns (1.747ns logic, 1.679ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            bin0_3 (FF)
+  Destination:       bin0<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: bin0_3 to bin0<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  bin0_3 (bin0_3)
+     OBUF:I->O                 2.571          bin0_3_OBUF (bin0<3>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.23 secs
+ 
+--> 
+
+Total memory usage is 254828 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   84 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

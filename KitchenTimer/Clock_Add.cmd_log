@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "X:/EC311/dir/KitchenTimer/Clock_Add.xst" -ofn "X:/EC311/dir/KitchenTimer/Clock_Add.syr" 
+xst -intstyle ise -ifn "X:/Desktop/KitchenTimer/Clock_Add.xst" -ofn "X:/Desktop/KitchenTimer/Clock_Add.syr" 
+xst -intstyle ise -ifn "X:/Desktop/KitchenTimer/Clock_Add.xst" -ofn "X:/Desktop/KitchenTimer/Clock_Add.syr" 
+xst -intstyle ise -ifn "X:/Desktop/KitchenTimer/Clock_Add.xst" -ofn "X:/Desktop/KitchenTimer/Clock_Add.syr" 
+xst -intstyle ise -ifn "X:/Desktop/KitchenTimer/Clock_Add.xst" -ofn "X:/Desktop/KitchenTimer/Clock_Add.syr" 
+xst -intstyle ise -ifn "X:/Desktop/KitchenTimer/Clock_Add.xst" -ofn "X:/Desktop/KitchenTimer/Clock_Add.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock.ucf -p xc6slx16-csg324-3 Clock_Add.ngc Clock_Add.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Clock_Add_map.ncd Clock_Add.ngd Clock_Add.pcf 
+par -w -intstyle ise -ol high -mt off Clock_Add_map.ncd Clock_Add.ncd Clock_Add.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Clock_Add.twx Clock_Add.ncd -o Clock_Add.twr Clock_Add.pcf -ucf clock.ucf 
+bitgen -intstyle ise -f Clock_Add.ut Clock_Add.ncd 

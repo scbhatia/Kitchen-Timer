@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "X:/EC311/dir/KitchenTimer/Clock_Sub.xst" -ofn "X:/EC311/dir/KitchenTimer/Clock_Sub.syr" 
+xst -intstyle ise -ifn "X:/EC311/dir/KitchenTimer/Clock_Sub.xst" -ofn "X:/EC311/dir/KitchenTimer/Clock_Sub.syr" 
+xst -intstyle ise -ifn "X:/EC311/dir/KitchenTimer/Clock_Sub.xst" -ofn "X:/EC311/dir/KitchenTimer/Clock_Sub.syr" 
+xst -intstyle ise -ifn "X:/EC311/dir/KitchenTimer/Clock_Sub.xst" -ofn "X:/EC311/dir/KitchenTimer/Clock_Sub.syr" 

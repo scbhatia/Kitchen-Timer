@@ -1,0 +1,28 @@
+Command line:
+   Clock_Sub_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  39509
+
+Thu Apr 21 19:59:17 2016
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 197.439 Meg
+
+ Total Signals          : 19
+ Total Nets             : 79
+ Total Signal Drivers   : 9
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 31
+ Total Scalar Nets and Variables : 223
+
+ Total Simulation Time: 0.03 sec
+
+ Current Memory Usage: 275.034 Meg
+
+Thu Apr 21 19:59:20 2016
+

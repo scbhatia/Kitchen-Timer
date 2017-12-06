@@ -1,0 +1,398 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Clock.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Clock.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Clock"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Clock
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock.v" into library work
+Parsing module <Clock>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Clock>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock.v" Line 52: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock.v" Line 57: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Clock>.
+    Related source file is "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock.v".
+        state_next = 3'b001
+        state_none = 3'b000
+        state_add_seconds_lower = 3'b010
+        state_add_seconds_upper = 3'b011
+        state_add_minutes_lower = 3'b100
+        state_add_minutes_upper = 3'b101
+    Found 8-bit register for signal <counter>.
+    Found 8-bit register for signal <seconds_lower>.
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | counter[7]_PWR_1_o_equal_2_o (negative)        |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <seconds_lower[7]_GND_1_o_add_3_OUT> created at line 52.
+    Found 8-bit adder for signal <state[2]_GND_1_o_add_10_OUT> created at line 57.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Clock> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 2
+# Registers                                            : 2
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Clock>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <seconds_lower>: 1 register on signal <seconds_lower>.
+Unit <Clock> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 8-bit up counter                                      : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0
+ 010   | 1
+-------------------
+
+Optimizing unit <Clock> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Clock, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Clock.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 51
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 7
+#      LUT3                        : 8
+#      LUT4                        : 1
+#      LUT6                        : 1
+#      MUXCY                       : 14
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 17
+#      FD                          : 9
+#      FDE                         : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              17  out of  18224     0%  
+ Number of Slice LUTs:                   19  out of   9112     0%  
+    Number used as Logic:                19  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     19
+   Number with an unused Flip Flop:       2  out of     19    10%  
+   Number with an unused LUT:             0  out of     19     0%  
+   Number of fully used LUT-FF pairs:    17  out of     19    89%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                   9  out of    232     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 17    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.696ns (Maximum Frequency: 370.954MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.696ns (frequency: 370.954MHz)
+  Total number of paths / destination ports: 133 / 25
+-------------------------------------------------------------------------
+Delay:               2.696ns (Levels of Logic = 9)
+  Source:            state_FSM_FFd1 (FF)
+  Destination:       counter_7 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: state_FSM_FFd1 to counter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              18   0.447   1.049  state_FSM_FFd1 (state_FSM_FFd1)
+     INV:I->O              1   0.206   0.579  state[2]_GND_1_o_equal_6_o_inv1_INV_0 (state[2]_GND_1_o_equal_6_o_inv)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<0> (Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<1> (Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<2> (Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<3> (Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<4> (Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_counter_cy<5> (Mcount_counter_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_counter_cy<6> (Mcount_counter_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_counter_xor<7> (Mcount_counter7)
+     FD:D                      0.102          counter_7
+    ----------------------------------------
+    Total                      2.696ns (1.068ns logic, 1.628ns route)
+                                       (39.6% logic, 60.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            seconds_lower_7 (FF)
+  Destination:       seconds_lower<7> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: seconds_lower_7 to seconds_lower<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  seconds_lower_7 (seconds_lower_7)
+     OBUF:I->O                 2.571          seconds_lower_7_OBUF (seconds_lower<7>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.696|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.25 secs
+ 
+--> 
+
+Total memory usage is 249840 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

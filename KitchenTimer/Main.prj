@@ -1,0 +1,6 @@
+verilog work "seven_alternate.v"
+verilog work "binary_to_segment.v"
+verilog work "SegDisplay.v"
+verilog work "Clock_Sub.v"
+verilog work "Clock.v"
+verilog work "Main.v"

@@ -1,0 +1,4 @@
+verilog isim_temp "clock_divider.v"
+verilog isim_temp "countdown.v"
+verilog isim_temp "t_countdown.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

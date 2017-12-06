@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/Desktop/KitchenTimer/Clock_Test_isim_beh.exe" -prj "X:/Desktop/KitchenTimer/Clock_Test_beh.prj" "work.Clock_Test" "work.glbl" 

@@ -1,0 +1,93 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Clock_Add.twx Clock_Add.ncd -o Clock_Add.twr Clock_Add.pcf
+-ucf clock.ucf
+
+Design file:              Clock_Add.ncd
+Physical constraint file: Clock_Add.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.22 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock CLK to Pad
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+minutes_lower<0>|         7.214(R)|      SLOW  |         3.753(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<1>|         7.002(R)|      SLOW  |         3.614(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<2>|         7.087(R)|      SLOW  |         3.702(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<3>|         7.199(R)|      SLOW  |         3.740(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<4>|         7.135(R)|      SLOW  |         3.712(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<5>|         7.028(R)|      SLOW  |         3.658(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<6>|         7.075(R)|      SLOW  |         3.674(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_lower<7>|         7.139(R)|      SLOW  |         3.696(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<0>|         7.276(R)|      SLOW  |         3.794(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<1>|         7.419(R)|      SLOW  |         3.975(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<2>|         7.419(R)|      SLOW  |         3.975(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<3>|         6.908(R)|      SLOW  |         3.535(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<4>|         6.988(R)|      SLOW  |         3.577(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<5>|         6.965(R)|      SLOW  |         3.618(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<6>|         6.969(R)|      SLOW  |         3.622(R)|      FAST  |CLK_BUFGP         |   0.000|
+minutes_upper<7>|         6.954(R)|      SLOW  |         3.560(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<0>|         7.134(R)|      SLOW  |         3.700(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<1>|         7.036(R)|      SLOW  |         3.666(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<2>|         6.862(R)|      SLOW  |         3.489(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<3>|         6.896(R)|      SLOW  |         3.526(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<4>|         6.649(R)|      SLOW  |         3.403(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<5>|         6.939(R)|      SLOW  |         3.538(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<6>|         6.864(R)|      SLOW  |         3.525(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_lower<7>|         6.846(R)|      SLOW  |         3.481(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<0>|         7.584(R)|      SLOW  |         4.113(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<1>|         7.322(R)|      SLOW  |         3.937(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<2>|         7.152(R)|      SLOW  |         3.720(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<3>|         7.024(R)|      SLOW  |         3.644(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<4>|         7.176(R)|      SLOW  |         3.791(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<5>|         7.152(R)|      SLOW  |         3.764(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<6>|         7.352(R)|      SLOW  |         3.844(R)|      FAST  |CLK_BUFGP         |   0.000|
+seconds_upper<7>|         7.193(R)|      SLOW  |         3.799(R)|      FAST  |CLK_BUFGP         |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.605|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Apr 22 01:16:23 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 216 MB
+
+
+

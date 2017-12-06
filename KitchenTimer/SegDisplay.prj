@@ -1,0 +1,3 @@
+verilog work "seven_alternate.v"
+verilog work "binary_to_segment.v"
+verilog work "SegDisplay.v"

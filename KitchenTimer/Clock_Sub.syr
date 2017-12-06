@@ -1,0 +1,395 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: Clock_Sub.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Clock_Sub.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Clock_Sub"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Clock_Sub
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v" into library work
+Parsing module <Clock_Sub>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Clock_Sub>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v" Line 47: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v" Line 81: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v" Line 88: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v" Line 95: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v" Line 102: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Clock_Sub>.
+    Related source file is "\\ad\eng\users\i\s\isigov\EC311\dir\KitchenTimer\Clock_Sub.v".
+        state_next = 3'b001
+        state_none = 3'b000
+        state_sub_seconds_lower = 3'b010
+        state_sub_seconds_upper = 3'b011
+        state_sub_minutes_lower = 3'b100
+        state_sub_minutes_upper = 3'b101
+        state_reset = 3'b110
+        state_init = 3'b111
+WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT<7:0>> created at line 81.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_14_OUT<7:0>> created at line 88.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_17_OUT<7:0>> created at line 95.
+    Found 8-bit subtractor for signal <GND_1_o_GND_1_o_sub_20_OUT<7:0>> created at line 102.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_lower<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seconds_upper<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_lower<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <minutes_upper<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator greater for signal <GND_1_o_seconds_lower[7]_LessThan_10_o> created at line 80
+    Found 8-bit comparator greater for signal <GND_1_o_seconds_upper[7]_LessThan_13_o> created at line 87
+    Found 8-bit comparator greater for signal <GND_1_o_minutes_lower[7]_LessThan_16_o> created at line 94
+    Found 8-bit comparator greater for signal <GND_1_o_minutes_upper[7]_LessThan_19_o> created at line 101
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  35 Latch(s).
+	inferred   4 Comparator(s).
+	inferred  22 Multiplexer(s).
+Unit <Clock_Sub> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 8-bit subtractor                                      : 4
+# Latches                                              : 35
+ 1-bit latch                                           : 35
+# Comparators                                          : 4
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 22
+ 1-bit 2-to-1 multiplexer                              : 18
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 1 in block <Clock_Sub>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_1> has a constant value of 1 in block <Clock_Sub>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_0> has a constant value of 1 in block <Clock_Sub>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 8-bit subtractor                                      : 4
+# Comparators                                          : 4
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 22
+ 1-bit 2-to-1 multiplexer                              : 18
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 1 in block <Clock_Sub>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_1> has a constant value of 1 in block <Clock_Sub>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_0> has a constant value of 1 in block <Clock_Sub>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <seconds_upper_7> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_6> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_5> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_4> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_3> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_2> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_1> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_7> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_6> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_5> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_4> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_3> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_2> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_1> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_7> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_6> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_5> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_4> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_3> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_2> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_1> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_7> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_6> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_5> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_4> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_3> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_2> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_1> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_upper_0> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <seconds_lower_0> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_upper_0> is equivalent to a wire in block <Clock_Sub>.
+WARNING:Xst:1294 - Latch <minutes_lower_0> is equivalent to a wire in block <Clock_Sub>.
+
+Optimizing unit <Clock_Sub> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Clock_Sub, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Clock_Sub.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# IO Buffers                       : 64
+#      IBUF                        : 32
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          65
+ Number of bonded IOBs:                  64  out of    232    27%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 4.372ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Delay:               4.372ns (Levels of Logic = 2)
+  Source:            seconds_upper_in<7> (PAD)
+  Destination:       seconds_upper<7> (PAD)
+
+  Data Path: seconds_upper_in<7> to seconds_upper<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  seconds_upper_in_7_IBUF (seconds_upper_7_OBUF)
+     OBUF:I->O                 2.571          seconds_upper_7_OBUF (seconds_upper<7>)
+    ----------------------------------------
+    Total                      4.372ns (3.793ns logic, 0.579ns route)
+                                       (86.8% logic, 13.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.49 secs
+ 
+--> 
+
+Total memory usage is 253740 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   79 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
